@@ -8,6 +8,7 @@ pipeline {
                 sh 'cd webapp && npm install'
                 sh 'cd webapp && npm run build'
 		sh 'cd webapp && cat dist/index.html'
+		sh 'scp -r webapp/dist ubuntu@172.31.14.36:/home/ubuntu/dist'
             }
         }
 
