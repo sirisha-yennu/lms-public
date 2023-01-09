@@ -5,8 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building & Deploy VM'
-		sh 'cd webapp && rimraf dist'
-                sh 'cd webapp && npm install'
+		sh 'cd webapp && rm -rf dist'
                 sh 'cd webapp && npm run build'
 		sh 'scp -r webapp/dist ubuntu@172.31.14.36:/home/ubuntu/dist'
             }
