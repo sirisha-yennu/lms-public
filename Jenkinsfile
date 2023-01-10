@@ -9,11 +9,11 @@ pipeline {
             }
         }
 
-        stage('Push') {
-            steps {
-                echo 'Deploying......'
-		sh 'docker push ravi2krishna/lms'
-            }
+
+ 	stage('Push image') {
+        withDockerRegistry([ credentialsId: "docker", url: "" ]) {
+        sh 'docker push ravi2krishna/lms'
         }
+
     }
 }
