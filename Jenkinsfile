@@ -9,9 +9,10 @@ pipeline {
             }
         }
 
-        stage('Deploy') {
+        stage('Push') {
             steps {
                 echo 'Deploying......'
+		sh 'docker push ravi2krishna/lms'
             }
         }
     }
