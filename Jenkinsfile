@@ -4,8 +4,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building & Deploy VM'
-		sh 'docker container ls'
+                echo 'Building'
+		sh 'docker build -t ravi2krishna/lms -f webapps/Dockerfile'
             }
         }
 
