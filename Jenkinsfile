@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building'
-		sh 'cd webapps && docker build -t ravi2krishna/lms .'
+		sh 'cd webapp && docker build -t ravi2krishna/lms .'
             }
         }
 
