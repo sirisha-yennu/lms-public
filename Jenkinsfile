@@ -18,5 +18,13 @@ pipeline {
 	}
 
     }
+
+        stage('Test') {
+            steps {
+                echo 'Run Container'
+                sh 'docker container run -dt -P ravi2krishna/lms'
+            }
+        }	
+
 }
 }
