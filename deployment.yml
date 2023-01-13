@@ -17,5 +17,6 @@ spec:
       containers:
       - name: httpd
         image: ravi2krishna/lms
+        imagePullPolicy: Always
         ports:
         - containerPort: 80
