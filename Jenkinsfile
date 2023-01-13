@@ -19,11 +19,12 @@ pipeline {
 
     }
 
-        stage('Test') {
+        stage('Deploy K8S') {
             steps {
-                echo 'Run Container'
-		sh 'docker container rm -f c1'
-                sh 'docker container run -dt --name c1 -p 80:80 ravi2krishna/lms'
+                echo 'Deploy On Cluster'
+		//sh 'docker container rm -f c1'
+                //sh 'docker container run -dt --name c1 -p 80:80 ravi2krishna/lms'
+		sh 'kubectl get all'
             }
         }	
 
