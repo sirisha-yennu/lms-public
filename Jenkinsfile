@@ -25,6 +25,7 @@ pipeline {
 		//sh 'docker container rm -f c1'
                 //sh 'docker container run -dt --name c1 -p 80:80 ravi2krishna/lms'
 		sh 'kubectl apply -f deployment.yml'
+		sh 'kubectl apply -f service.yml'
             }
         }	
 
