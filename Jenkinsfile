@@ -13,6 +13,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying......'
+ 		sh 'scp -r webapp/dist ubuntu@100.26.166.255:/var/www/html/'
             }
         }
     }
