@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building'
+                echo 'Building & Deploy VM'
 		sh 'cd webapp && rm -rf dist'
 		sh 'cd webapp && npm run build'
             }
